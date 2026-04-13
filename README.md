@@ -1,5 +1,10 @@
 # Lab 5 – Cosine Distance
 
+## Purpose
+Given a set of k-dimensional vectors, compute how similar they are by measuring 
+the angle between them. Vectors pointing in the same direction have a small cosine 
+distance (near 0), while opposite vectors have a large one (near pi).
+
 ## Build & Run
 
 ```bash
