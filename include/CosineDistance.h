@@ -1,6 +1,5 @@
 #pragma once
 #include "Vector.h"
-#include <utility>
 #include <vector>
 
 struct PairDistance {
@@ -10,5 +9,4 @@ struct PairDistance {
 };
 
 double cosineDistance(const Vector& x, const Vector& y);
-
 std::vector<PairDistance> allPairwiseDistances(const std::vector<Vector>& vectors);
