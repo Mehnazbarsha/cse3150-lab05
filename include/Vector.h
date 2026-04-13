@@ -1,6 +1,5 @@
 #pragma once
 #include <vector>
-#include <string>
 
 class Vector {
 public:
@@ -9,7 +8,6 @@ public:
     double operator[](std::size_t i) const;
     double dot(const Vector& other) const;
     double magnitude() const;
-    std::string toString() const;
 
 private:
     std::vector<double> data_;
