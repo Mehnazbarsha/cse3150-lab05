@@ -56,13 +56,15 @@ void test_cos_zero_vector() {
 // allPairwiseDistances
 
 void test_pairwise_count() {
-    auto pairs = allPairwiseDistances({{{1,0},{0,1},{1,1},{-1,0}}});
+    std::vector<Vector> vecs = {Vector({1,0}), Vector({0,1}), Vector({1,1}), Vector({-1,0})};
+    auto pairs = allPairwiseDistances(vecs);
     assert(pairs.size() == 12);  // C(4,2)=6 pairs × 2 directions
     std::cout << "[PASS] test_pairwise_count\n";
 }
 
 void test_pairwise_sorted() {
-    auto pairs = allPairwiseDistances({{{1,0},{0,1},{1,1}}});
+    std::vector<Vector> vecs = {Vector({1,0}), Vector({0,1}), Vector({1,1})};
+    auto pairs = allPairwiseDistances(vecs);
     for (std::size_t k = 1; k < pairs.size(); ++k)
         assert(pairs[k-1].distance <= pairs[k].distance + 1e-12);
     std::cout << "[PASS] test_pairwise_sorted\n";
